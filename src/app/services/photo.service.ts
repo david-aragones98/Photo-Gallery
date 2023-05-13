@@ -29,6 +29,7 @@ export class PhotoService {
   }
   
   private convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
+    console.log("esta es mi rama")
     const reader = new FileReader();
     reader.onerror = reject;
     reader.onload = () => {
