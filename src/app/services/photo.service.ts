@@ -10,7 +10,7 @@ import { Capacitor } from '@capacitor/core';
 })
 export class PhotoService {
   
-  private async readAsBase64(photo: Photo) {
+  private async readBase64(photo: Photo) {
     // "hybrid" will detect Cordova or Capacitor
     if (this.platform.is('hybrid')) {
       // Read the file into base64 format
@@ -43,7 +43,7 @@ export class PhotoService {
  // Save picture to file on device
  private async savePicture(photo: Photo) {
   // Convert photo to base64 format, required by Filesystem API to save
-  const base64Data = await this.readAsBase64(photo);
+  const base64Data = await this.readBase64(photo);
 
   // Write the file to the data directory
   const fileName = new Date().getTime() + '.jpeg';
