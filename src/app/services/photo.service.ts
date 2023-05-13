@@ -29,7 +29,9 @@ export class PhotoService {
   }
   
   private convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
-    console.log("esta es mi rama")
+    console.log("esta es mi commit 1")
+    console.log("esta es mi commit 2")
+    console.log("esta es mi commit 3")
     const reader = new FileReader();
     reader.onerror = reject;
     reader.onload = () => {
